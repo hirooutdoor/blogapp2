@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
 
   before_action :set_article, only: [:show, :edit, :update]
-  
+
   def index
     @articles = Article.all
   end
 
-  def show    
+  def show
   end
 
   def new
@@ -20,10 +20,10 @@ class ArticlesController < ApplicationController
     else
       flash.now[:error] = '保存に失敗しました'
       render :new
-    end    
+    end
   end
 
-  def edit    
+  def edit
   end
 
   def update
