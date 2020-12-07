@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
   end
-  resources :profile
+  resource :profile, only: [:show, :edit, :update]
 end
