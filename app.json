@@ -1,0 +1,17 @@
+{
+    "name": "blogapp2",
+    "description": "This is blogapp2",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/hirooutdoor/blogapp2",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
+  
