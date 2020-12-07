@@ -31,6 +31,7 @@ gem 'binding_of_caller'
 gem 'faker'
 gem 'hamlit'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -40,6 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'rubocop-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
