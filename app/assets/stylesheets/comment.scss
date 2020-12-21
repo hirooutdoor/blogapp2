@@ -1,0 +1,38 @@
+
+@import './variables';
+
+$avatar-size: 32px;
+$container-margin: 16px;
+
+.comment {
+    
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: $container-margin;
+    }
+
+    &_avatar{
+        display: inline-flex;
+        width: 20% ;
+
+        img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin: 16px 6px;
+        }
+    }
+
+    &_area {
+        display: inline-flex;
+        width: 70% ;
+        margin: 16px 0px;
+
+    }
+
+}
+
+
+
