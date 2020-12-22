@@ -26,12 +26,7 @@
 
 .article
   %h2 コメント一覧
-  .comment_list
-    - @comments.each do |comment|
-      .comment_avatar
-        =image_tag comment.user.avatar_image
-      .comment_area
-        %p= comment.content
+  .comment-container
 
 .container
   = link_to new_article_comment_path(@article) do
