@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   root to: 'articles#index'
+  resource :timeline, only: %i(show)
 
   resources :articles do
     resources :comments, only: [:new, :create]
