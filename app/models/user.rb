@@ -37,21 +37,14 @@ class User < ApplicationRecord
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
+
+
   def has_written?(article)
     articles.exists?(id: article.id)
   end
 
   def has_liked?(article)
     likes.exists?(article_id: article.id)
-  end
-
-  def display_name
-    # if profile && profile.nickname
-    # profile.nickname
-    # else
-    # self.email.split('@').first   
-    # end
-    profile&.nickname || self.email.split('@').first
   end
 
   # def birthday
@@ -82,13 +75,7 @@ class User < ApplicationRecord
     profile || build_profile
   end
 
-  def avatar_image
-    if profile&.avatar&.attached?
-      profile.avatar
-    else
-      'default-avatar.png'
-    end
-  end
+
 
   private
   def get_user_id(user)
