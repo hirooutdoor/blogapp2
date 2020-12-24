@@ -1,5 +1,4 @@
-class TimelinesController < ApplicationController
-    before_action :authenticate_user!
+class Apps::TimelinesController < Apps::ApplicationController
 
     def show
         #自分がフォローしている人のidを取得して記事を取得したい
